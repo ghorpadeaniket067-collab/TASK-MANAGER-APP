@@ -1,43 +1,3 @@
-// import React, { useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
-// import "../App.css";
-
-// function Loading() {
-
-//   const navigate = useNavigate();
-
-//   useEffect(() => {
-
-//     setTimeout(() => {
-
-//       navigate("/landing");
-
-//     }, 2500);
-
-//   }, [navigate]);
-
-//   return (
-
-//     <div className="loading-page">
-
-//       <div className="loader"></div>
-
-//       <h1>Task Manager</h1>
-
-//       <p>Loading...</p>
-
-//     </div>
-
-//   );
-// }
-
-// export default Loading;   
-
-
-
-
-
-
 import React, {
   useEffect,
   useState,
@@ -66,9 +26,7 @@ function Landing() {
   const [tasks, setTasks] =
   useState([]);
 
-  /* ========================= */
   /* FETCH TASKS */
-  /* ========================= */
 
   useEffect(() => {
 
@@ -97,9 +55,7 @@ function Landing() {
 
   };
 
-  /* ========================= */
   /* COUNTS */
-  /* ========================= */
 
   const totalTasks =
   tasks.length;
@@ -114,9 +70,7 @@ function Landing() {
     (task) => task.completed
   ).length;
 
-  /* ========================= */
   /* GET STARTED */
-  /* ========================= */
 
   const handleGetStarted =
   () => {

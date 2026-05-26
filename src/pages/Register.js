@@ -1,29 +1,161 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+// import "../App.css";
+
+// function Register() {
+
+//   const navigate = useNavigate();
+
+//   const [email, setEmail] = useState("");
+
+//   const [password, setPassword] =
+//     useState("");
+
+//   const register = async () => {
+
+//     if (!email || !password) {
+
+//       alert("Please fill all fields");
+
+//       return;
+//     }
+
+//     try {
+
+//       const res = await fetch(
+//         "http://localhost:5000/auth/register",
+//         {
+
+//           method: "POST",
+
+//           headers: {
+//             "Content-Type":
+//             "application/json",
+//           },
+
+//           body: JSON.stringify({
+//             email,
+//             password,
+//           }),
+
+//         }
+//       );
+
+//       const data = await res.json();
+
+//       alert(
+//         data.message ||
+//         "Registered Successfully"
+//       );
+
+//       navigate("/login");
+
+//     } catch (err) {
+
+//       alert("Server error");
+
+//     }
+
+//   };
+
+//   return (
+
+//     <div className="auth-page">
+
+//       <div className="auth-card">
+
+//         <h1>Create Account 🚀</h1>
+
+//         <p>
+//           Register and start managing
+//           your tasks smartly
+//         </p>
+
+//         <input
+//           type="email"
+//           placeholder="Enter Email"
+//           onChange={(e) =>
+//             setEmail(e.target.value)
+//           }
+//         />
+
+//         <input
+//           type="password"
+//           placeholder="Enter Password"
+//           onChange={(e) =>
+//             setPassword(e.target.value)
+//           }
+//         />
+
+//         <button onClick={register}>
+//           Register
+//         </button>
+
+//         <p className="auth-link">
+
+//           Already have account?
+
+//           <span
+//             onClick={() =>
+//               navigate("/login")
+//             }
+//           >
+//             Login
+//           </span>
+
+//         </p>
+
+//       </div>
+
+//     </div>
+
+//   );
+// }
+
+// export default Register;
+
+
+
+
+
+import { useState }
+from "react";
+
+import {
+  useNavigate,
+} from "react-router-dom";
+
 import "../App.css";
 
 function Register() {
 
-  const navigate = useNavigate();
+  const navigate =
+  useNavigate();
 
-  const [email, setEmail] = useState("");
+  const [email, setEmail] =
+  useState("");
 
-  const [password, setPassword] =
-    useState("");
+  const [password,
+  setPassword] =
+  useState("");
 
-  const register = async () => {
+  const register =
+  async () => {
 
     if (!email || !password) {
 
-      alert("Please fill all fields");
+      alert(
+        "Please fill all fields"
+      );
 
       return;
     }
 
     try {
 
-      const res = await fetch(
-        "http://localhost:5000/auth/register",
+      const res =
+      await fetch(
+        "https://task-manager-app-2-2rfd.onrender.com/auth/register",
         {
 
           method: "POST",
@@ -41,7 +173,8 @@ function Register() {
         }
       );
 
-      const data = await res.json();
+      const data =
+      await res.json();
 
       alert(
         data.message ||
@@ -64,30 +197,38 @@ function Register() {
 
       <div className="auth-card">
 
-        <h1>Create Account 🚀</h1>
+        <h1>
+          Create Account 🚀
+        </h1>
 
         <p>
-          Register and start managing
-          your tasks smartly
+          Register and start
+          managing tasks
         </p>
 
         <input
           type="email"
-          placeholder="Enter Email"
+          placeholder="Email"
           onChange={(e) =>
-            setEmail(e.target.value)
+            setEmail(
+              e.target.value
+            )
           }
         />
 
         <input
           type="password"
-          placeholder="Enter Password"
+          placeholder="Password"
           onChange={(e) =>
-            setPassword(e.target.value)
+            setPassword(
+              e.target.value
+            )
           }
         />
 
-        <button onClick={register}>
+        <button
+          onClick={register}
+        >
           Register
         </button>
 
